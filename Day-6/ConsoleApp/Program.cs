@@ -8,7 +8,7 @@ namespace Day6
         static void Main()
         {
             DisposableDemo();
-            RecordDemo();
+            RecordDemoExample();   // renamed method
 
             Console.ReadLine();
         }
@@ -25,19 +25,17 @@ namespace Day6
             manager2.OpenFile("test2.txt");
             // Dispose called at end of scope
         }
-        
 
-        private static void RecordDemo()
+        private static void RecordDemoExample()   // renamed
         {
             var temp1 = new Temp { Id = 1, Name = "Temp1" };
             var temp2 = new Temp { Id = 2, Name = "Temp2" };
-            
 
             Console.WriteLine(temp1);
             Console.WriteLine(temp2);
             Console.WriteLine(temp1 == temp2);
 
-            var temp3  = temp1 with { Id =2};
+            var temp3 = temp1 with { Id = 2 };
             Console.WriteLine(temp3);
         }
     }
